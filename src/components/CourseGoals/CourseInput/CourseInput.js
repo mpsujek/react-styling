@@ -21,6 +21,7 @@ const CourseInput = (props) => {
       return;
     }
     props.onAddGoal(enteredValue);
+    setEnteredValue('');
   };
 
   return (
@@ -33,6 +34,7 @@ const CourseInput = (props) => {
             background: !isValid ? 'salmon' : 'transparent',
           }}
           type='text'
+          value={enteredValue}
           onChange={goalInputChangeHandler}
         />
       </div>
